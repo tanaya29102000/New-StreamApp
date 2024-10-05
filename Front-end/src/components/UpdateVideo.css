@@ -86,7 +86,7 @@ textarea {
 /* Styles for the square-shaped cart */
 .square-cart {
   width: 200px; /* Set width for square shape */
-  height: 200px; /* Set height for square shape */
+  height: 100px; /* Set height for square shape */
   border: 1px solid #ccc; /* Add border */
   border-radius: 8px; /* Optional: round the corners */
   padding: 15px; /* Padding inside the square */

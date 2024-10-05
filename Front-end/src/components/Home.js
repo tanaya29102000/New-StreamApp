@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/videos');
+        const response = await axios.get('https://new-stream-app.vercel.app/api/videos');
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -37,7 +37,7 @@ const Home = () => {
       dangerMode: true,
     }).then((confirmed) => {
       if (confirmed) {
-        axios.delete(`http://localhost:5000/api/videos/${id}`)
+        axios.delete(`https://new-stream-app.vercel.app/api/videos/${id}`)
           .then(() => {
             setPosts(posts.filter(post => post._id !== id));
             swal("Deleted!", "Your post has been deleted.", "success");

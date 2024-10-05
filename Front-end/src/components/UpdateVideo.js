@@ -24,7 +24,7 @@ const UpdateVideo = () => {
       setLoading(true);
       if (id) {
         try {
-          const response = await axios.get(`http://localhost:5000/api/videos/${id}`);
+          const response = await axios.get(`https://new-stream-app.vercel.app/api/videos/${id}`);
           const post = response.data;
           setInitialValues({
             title: post.title,
@@ -93,7 +93,7 @@ const UpdateVideo = () => {
         videoUrl = videoPreview; // Use the existing video if a new one is not uploaded
       }
 
-      await axios.put(`http://localhost:5000/api/videos/${id}`, {
+      await axios.put(`https://new-stream-app.vercel.app/api/videos/${id}`, {
         title: values.title,
         content: values.content,
         author: values.author,

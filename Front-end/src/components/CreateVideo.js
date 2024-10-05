@@ -58,7 +58,7 @@ const CreateVideo = () => {
         video: videoUrl, // Save video URL instead of image
       };
 
-      await axios.post("http://localhost:5000/api/videos", postData);
+      await axios.post("https://new-stream-app.vercel.app/api/videos", postData);
       swal("Success", "Post created successfully!", "success");
       setTimeout(() => navigate("/home"), 1000);
     } catch (error) {
