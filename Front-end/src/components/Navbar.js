@@ -5,14 +5,14 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="left-side">MyVideos</div>
+      <div className="left-side">MY STREAMING APP</div>
       
       {/* Empty div to create space between left and right */}
       <div className="navbar-space"></div>
       
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/home" className="navbar-link">Home</Link>
+          <Link to="/home" className="navbar-link">All Uploaded Videos</Link>
         </li>
         <li className="navbar-item">
           <Link to="/CreatePost" className="navbar-link">Upload Video</Link>

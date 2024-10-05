@@ -1,167 +1,138 @@
-/* General container for the home page */
+/* Home.css */
 .home {
-  padding: 30px;
-  background-color: #f4f4f4;
-  min-height: 100vh;
-  font-family: 'Arial', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* Title of the page */
 .post-title {
   text-align: center;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 2rem;
   color: #333;
-  margin-bottom: 30px;
+  margin-bottom: 1.5rem;
 }
 
-/* Error message styling */
 .error-message {
   color: red;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 1rem;
 }
 
-/* List of posts */
 .post-list {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 1000px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
 }
 
-/* Individual post styling for a cart-like rectangular look */
 .post-item {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  border: 1px solid #e0e0e0; /* Light border to create cart-like separation */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
-  width: 30%; /* Three items per row */
-  box-sizing: border-box;
-  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Add hover effect for a cart-like feel */
-.post-item:hover {
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-/* Post content styling */
 .post-content h5 {
-  font-size: 20px;
-  color: #007bff;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
 .post-content p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 10px;
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 1rem;
 }
 
-/* Video container styling */
 .video-container {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
+  margin-top: 1rem;
 }
 
-video {
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: auto;
-}
-
-/* Edit and delete buttons */
 .post-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
-.edit-btn, .delete-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
+.edit-btn,
+.delete-btn {
+  padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
+  color: white;
+  background-color: #007bff;
   cursor: pointer;
   text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.edit-btn:hover {
-  background-color: #0056b3;
+  font-size: 0.9rem;
+  margin-right: 1rem;
 }
 
 .delete-btn {
   background-color: #dc3545;
 }
 
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
 .delete-btn:hover {
   background-color: #c82333;
 }
 
-/* Pagination styling */
+/* Pagination styles */
 .pagination-nav {
-  margin-top: 30px;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .pagination {
-  list-style: none;
-  padding: 0;
-  display: inline-block;
+  list-style-type: none;
+  display: inline-flex;
+  padding-left: 0;
 }
 
 .page-item {
-  display: inline;
-  margin: 0 5px;
+  margin: 0 0.3rem;
 }
 
 .page-link {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
   border-radius: 5px;
-  cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s;
+  color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .page-link:hover {
-  background-color: #0056b3;
+  background-color: #007bff;
+  color: white;
 }
 
 .page-item.active .page-link {
-  background-color: #0056b3;
-  pointer-events: none;
+  background-color: #007bff;
+  color: white;
+  cursor: default;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .post-item {
-    width: 45%; /* 2 items per row on medium screens */
-  }
-}
-
+/* Responsive styling */
 @media (max-width: 768px) {
-  .post-list {
-    flex-direction: column;
-    align-items: center;
+  .post-content h5 {
+    font-size: 1.1rem;
   }
-  
-  .post-item {
-    max-width: 100%;
-    width: 100%; /* Full width for small screens */
+
+  .post-content p {
+    font-size: 0.9rem;
+  }
+
+  .video-container video {
+    width: 100%;
+    height: auto;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
   }
 }
