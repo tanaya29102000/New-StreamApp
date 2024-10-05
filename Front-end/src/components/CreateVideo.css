@@ -1,0 +1,116 @@
+/* Background styling */
+.blog-post-form {
+  background-image: url('../../public/assets/images.jpg'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* To stack elements vertically */
+}
+
+/* New Upload Video heading styling */
+.upload-video-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+form {
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for form */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Form header styling */
+.header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Video input styling */
+.form-group input[type="file"] {
+  padding: 5px;
+  border: none;
+}
+
+.form-group img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+/* Button styling */
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Loading state for button */
+.button[disabled] {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  form {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
