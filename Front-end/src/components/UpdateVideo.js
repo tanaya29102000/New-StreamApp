@@ -215,7 +215,7 @@ const UpdateVideo = () => {
       setLoading(true);
       if (id) {
         try {
-          const response = await axios.get(`https://new-stream-app.vercel.app/api/videos/${id}`);
+          const response = await axios.get(`https://new-stream-app-p3gm.vercel.app/api/videos/${id}`);
           const post = response.data;
           setInitialValues({
             title: post.title,
@@ -298,7 +298,7 @@ const UpdateVideo = () => {
       formData.append('author', values.author);
       formData.append('video', videoUrl);
 
-      await axios.put(`https://new-stream-app.vercel.app/api/videos/${id}`, formData, {
+      await axios.put(`https://new-stream-app-p3gm.vercel.app/api/videos/${id}`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
