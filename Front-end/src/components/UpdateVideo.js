@@ -248,7 +248,7 @@ const UpdateVideo = () => {
 
     try {
       const uploadResponse = await axios.post(
-        'https://api.cloudinary.com/v1_1/dobtzmaui/video/images1', // Cloudinary video upload URL
+        'https://api.cloudinary.com/v1_1/dobtzmaui/video/upload', // Cloudinary video upload URL
         formData
       );
       console.log('Video uploaded successfully:', uploadResponse.data.secure_url);
