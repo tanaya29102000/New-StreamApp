@@ -83,7 +83,7 @@ const Home = () => {
               </div>
             )}
             <div className="post-actions">
-              <Link to={`/update-post/${post._id}`} className="edit-btn">Edit</Link>
+              {/* <Link to={`/update-post/${post._id}`} className="edit-btn">Edit</Link> */}
               <button onClick={() => handleDelete(post._id)} className="delete-btn">Delete</button>
             </div>
           </li>

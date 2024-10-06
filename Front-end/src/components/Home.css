@@ -1,109 +1,86 @@
-/* Home.css */
 .home {
   width: 80%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
 }
 
 .post-title {
   text-align: center;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .error-message {
   color: red;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .post-list {
-  list-style: none;
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Space between the columns */
+  list-style: none; /* Remove list marker */
+  padding: 0; /* Remove default padding */
 }
 
 .post-item {
   background-color: #f9f9f9;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.post-content h5 {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.post-content p {
-  margin: 0.5rem 0;
-  color: #555;
-  font-size: 1rem;
+.post-content {
+  margin-bottom: 10px;
 }
 
 .video-container {
-  margin-top: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .post-actions {
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 10px;
 }
 
-.edit-btn,
 .delete-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
+  background-color: #ff4d4d;
   color: white;
-  background-color: #007bff;
+  border: none;
+  padding: 8px 12px;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-right: 1rem;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-}
-
-.edit-btn:hover {
-  background-color: #0056b3;
+  border-radius: 3px;
 }
 
 .delete-btn:hover {
-  background-color: #c82333;
+  background-color: #ff1a1a;
 }
 
-/* Pagination styles */
 .pagination-nav {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
 .pagination {
-  list-style-type: none;
-  display: inline-flex;
-  padding-left: 0;
+  list-style: none; /* Remove list marker */
+  padding: 0; /* Remove default padding */
+  display: inline-block;
 }
 
 .page-item {
-  margin: 0 0.3rem;
+  display: inline;
 }
 
 .page-link {
-  display: block;
-  padding: 0.5rem 1rem;
+  padding: 8px 12px;
+  margin: 0 5px;
   border: 1px solid #007bff;
-  border-radius: 5px;
-  text-decoration: none;
   color: #007bff;
+  text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 3px;
 }
 
 .page-link:hover {
@@ -114,25 +91,16 @@
 .page-item.active .page-link {
   background-color: #007bff;
   color: white;
-  cursor: default;
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
-  .post-content h5 {
-    font-size: 1.1rem;
+  .post-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
   }
+}
 
-  .post-content p {
-    font-size: 0.9rem;
-  }
-
-  .video-container video {
-    width: 100%;
-    height: auto;
-  }
-
-  .pagination {
-    flex-wrap: wrap;
+@media (max-width: 480px) {
+  .post-list {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
   }
 }

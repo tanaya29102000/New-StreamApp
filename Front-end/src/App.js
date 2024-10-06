@@ -5,7 +5,7 @@ import './App.css'; // Corrected import path
 import CreateVideo from './components/CreateVideo';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import UpdateVideo from './components/UpdateVideo'; // Import for the new edit page
+// import UpdateVideo from './components/UpdateVideo'; // Import for the new edit page
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} /> 
           <Route path="/CreatePost" element={<CreateVideo />} /> 
-          <Route path="/update-post/:id" element={<UpdateVideo />} />
+          {/* <Route path="/update-post/:id" element={<UpdateVideo />} /> */}
         </Routes>
       </div>
     </Router>
